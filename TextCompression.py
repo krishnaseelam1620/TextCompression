@@ -128,6 +128,8 @@ class HuffmanCoding:
                 bit_string+=bits
                 byte=file.read(1)
             actual_text=self.__removePadding(bit_string)
+            decompressed_text=self.__decodeText(actual_text)
+            output.write(decompressed_text)
     
         
 

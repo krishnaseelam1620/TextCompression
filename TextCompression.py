@@ -106,16 +106,11 @@ class HuffmanCoding:
             current_bits+=bit
             if current_bits in self.__reverseCodes:
                 character=self.__reverseCodes[current_bits]
-                decoded_text=""
+                decoded_text+=character
                 current_bits=""
+        return decoded_text
                 
-                for bit in text:
-                    current_bits+=bit
-                    if current_bits in self.__reverseCodes:
-                        character=self.__reverseCodes[current_bits]
-                        decoded_text+=character
-                        current_bits=""
-                    return decoded_text
+                
     def decompress(self,input_path):
         filename,file_extension=os.path.splitext(self.path)
         output_path=filename + "_decompressed" + ".txt"

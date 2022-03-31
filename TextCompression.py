@@ -104,7 +104,7 @@ class HuffmanCoding:
         current_bits=""
         for bit in text:
             current_bits+=bit
-            if current_bits in self.reverseCodes:
+            if current_bits in self.__reverseCodes:
                 character=self.__reverseCodes[current_bits]
                 decoded_text=""
                 current_bits=""
